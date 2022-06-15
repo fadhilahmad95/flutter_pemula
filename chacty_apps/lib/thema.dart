@@ -6,6 +6,7 @@ const Color cyanColor = Color(0xff9ED0FF);
 const Color greyColor = Color(0xff808BA2);
 const Color greenColor = Color(0xff29CB9E);
 const Color blackColor = Color(0xff2C3A59);
+const Color greylightColor = Color(0xffF8FAFC);
 
 TextStyle titleTextStyle = const TextStyle(
   color: blackColor,

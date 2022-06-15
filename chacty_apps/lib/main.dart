@@ -1,3 +1,4 @@
+import 'package:chacty_apps/pages/chating_page.dart';
 import 'package:chacty_apps/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(fontFamily: "Poppins"),
-      home: HomePage(),
+      home: ChatingPage(),
     );
   }
 }
