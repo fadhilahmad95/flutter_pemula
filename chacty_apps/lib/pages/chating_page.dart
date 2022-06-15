@@ -18,7 +18,8 @@ class ChatingPage extends StatelessWidget {
           color: whiteColor,
           borderRadius: BorderRadius.circular(75),
         ),
-        width: 315,
+        // media querty kiri 30 kanan 30 total layar 100
+        width: MediaQuery.of(context).size.width - (2 * 30), 
         child: Row(
           children: [
             Text(
