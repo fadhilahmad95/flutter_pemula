@@ -156,8 +156,8 @@ class HomePage extends StatelessWidget {
                 ),
                 SizedBox(height: 10),
                 Container(
-                  padding: EdgeInsets.symmetric(horizontal: 20),
-                  child: Text(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: const Text(
                     "Recent Transcation",
                     style: TextStyle(
                       fontSize: 24,
@@ -169,12 +169,27 @@ class HomePage extends StatelessWidget {
                 Container(
                   margin: EdgeInsets.only(top: 20, bottom: 20),
                   child: Column(
-                    children: [
-                      RecentCard(),
-                      RecentCard(),
-                      RecentCard(),
-                      RecentCard(),
-                      RecentCard(),
+                    children: const [
+                      RecentCard(
+                        judul: "Cash Withdrawal",
+                        date: "10.30 23 Aug",
+                        biaya: "\$ 302",
+                      ),
+                      RecentCard(
+                        judul: "Payment",
+                        date: "11.30 23 Aug",
+                        biaya: "\$ 500",
+                      ),
+                      RecentCard(
+                        judul: "Grocery Store",
+                        date: "12.30 23 Aug",
+                        biaya: "\$ 56",
+                      ),
+                      RecentCard(
+                        judul: "Monthly Subscribe",
+                        date: "14.30 23 Aug",
+                        biaya: "\$ 23",
+                      ),
                     ],
                   ),
                 )
@@ -188,8 +203,14 @@ class HomePage extends StatelessWidget {
 }
 
 class RecentCard extends StatelessWidget {
+  final String judul;
+  final String date;
+  final String biaya;
   const RecentCard({
     Key? key,
+    required this.judul,
+    required this.biaya,
+    required this.date,
   }) : super(key: key);
 
   @override
@@ -210,10 +231,29 @@ class RecentCard extends StatelessWidget {
           SizedBox(width: 10),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [Text("Cash Withdrawal"), Text("10.30 23 Aug")],
+            children: [
+              Text(
+                judul,
+                style: TextStyle(
+                  fontSize: 16,
+                ),
+              ),
+              const SizedBox(height: 5),
+              Text(
+                date,
+                style: TextStyle(
+                  fontSize: 12,
+                ),
+              ),
+            ],
           ),
           Spacer(),
-          Text("\$ 304")
+          Text(
+            biaya,
+            style: TextStyle(
+              fontSize: 18,
+            ),
+          )
         ],
       ),
     );
