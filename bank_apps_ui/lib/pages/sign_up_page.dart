@@ -14,21 +14,22 @@ class SignUpPage extends StatelessWidget {
             children: [
               Container(
                 padding: const EdgeInsets.only(top: 30),
-                child: const Center(
-                  child: Text(
-                    "My Logo",
-                    style: TextStyle(
-                      fontSize: 28,
-                      color: Colors.white,
-                    ),
+                child: Center(
+                  child: Column(
+                    children: [
+                      Text(
+                        "My Logo",
+                        style: TextStyle(
+                          fontSize: 28,
+                          color: Colors.white,
+                        ),
+                      ),
+                      Image.asset(
+                        "assets/img/ilustration.png",
+                        width: 300,
+                      ),
+                    ],
                   ),
-                ),
-              ),
-              Container(
-                padding: const EdgeInsets.only(top: 30),
-                child: Image.asset(
-                  "assets/img/ilustration.png",
-                  width: 300,
                 ),
               ),
               Container(
@@ -54,7 +55,7 @@ class SignUpPage extends StatelessWidget {
                     const SizedBox(height: 30),
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        padding: EdgeInsets.symmetric(
+                        padding: const EdgeInsets.symmetric(
                           horizontal: 40,
                           vertical: 12,
                         ),
